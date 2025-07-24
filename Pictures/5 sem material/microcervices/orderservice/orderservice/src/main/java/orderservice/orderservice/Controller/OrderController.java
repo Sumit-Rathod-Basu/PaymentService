@@ -4,13 +4,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import orderservice.orderservice.Service.OrderService;
 import orderservice.orderservice.dto.Orderdto;
+import orderservice.orderservice.dto.Orderrequest;
+import orderservice.orderservice.dto.Orderresponse;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-
 
 
 @RestController
@@ -20,9 +20,9 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping("/save/new/order")
-    public Orderdto postMethodName(@RequestBody Orderdto entity) {
+    public Orderresponse postMethodName(@RequestBody Orderrequest entity) {
         //TODO: process POST request
-        Orderdto savedOrder = orderService.createOrder(entity);
+        Orderresponse savedOrder = orderService.createOrder(entity);
         return savedOrder;
     }
 
