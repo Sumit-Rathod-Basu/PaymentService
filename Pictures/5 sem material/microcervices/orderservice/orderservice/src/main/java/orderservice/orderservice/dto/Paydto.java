@@ -12,5 +12,6 @@ public class Paydto {
     private String paymentMethod;
     private String paymentStatus;
     private double amount;
+    
 
 }
