@@ -1,6 +1,6 @@
 spring:
   application:
-    name: map-struct-project
+    name: payment-service
 
   datasource:
     url: jdbc:mysql://localhost:3306/mapstruct
@@ -19,6 +19,8 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8383/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
-    hostname: localhost     
+    hostname: localhost    
+
+
